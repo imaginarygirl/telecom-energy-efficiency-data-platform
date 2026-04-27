@@ -32,6 +32,19 @@ The solution follows a **Medallion Architecture**:
 
 ---
 
+### 🔹 Geospatial / Network Configuration Data
+
+The platform also handled geospatial telecom data, including:
+
+- KML site coordinates
+- Atoll cell metadata
+- Coverage map geometries from shapefiles
+- WKT geometry generation for downstream spatial analysis
+
+This enabled enrichment of KPI datasets with network topology and coverage context.
+
+---
+
 ### 🔹 Version-Aware Merge Logic
 - Handles overlapping datasets across versions
 - Prioritizes latest versions
@@ -87,6 +100,17 @@ Certain KPIs were not available in earlier versions.
   - missing data
   - true zero values
   - derived ratios
+
+---
+
+### 4. Geospatial Telecom Data
+
+The platform had to process different data formats beyond CSV, including KML and shapefile-based coverage data.
+
+**Solution:**
+- Parsed site coordinates from KML
+- Standardized coverage geometries as WKT
+- Prepared geospatial outputs for overlap and coverage analysis
 
 ---
 
